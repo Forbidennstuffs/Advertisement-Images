@@ -1,0 +1,23 @@
+getcustomasset = getsynasset or getcustomasset
+request = syn and syn.request or request
+
+local path = "spacead.png"
+local url = "https://cdn.discordapp.com/attachments/1141292021215133756/1163449907328335924/20231016_151424.jpg"
+local result = request({
+	Url = url,
+	Method = 'GET'
+})
+
+if result.Success then
+if isfile(path) then
+if readfile(path) ~= result.Body then
+writefile(path, result.Body)
+end
+else
+writefile(path, result.Body)
+end
+else
+writefile(path, result.Body)
+end
+wait(1)
+game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ScriptAds.Image = getcustomasset("spacead.png")
