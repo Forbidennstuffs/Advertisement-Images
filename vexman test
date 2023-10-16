@@ -26,4 +26,9 @@ ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel.BorderSizePixel = 0
 ImageLabel.Size = UDim2.new(0, 100, 0, 100)
 ImageLabel.ScaleType = Enum.ScaleType.Fit
+
+coroutine.wrap(function()
+while wait() do
 ImageLabel.Image = getcustomasset("vexman.png")
+end
+end)()
