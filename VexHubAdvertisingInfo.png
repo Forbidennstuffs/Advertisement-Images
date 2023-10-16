@@ -2,8 +2,8 @@ exe = syn or Fluxus
 getcustomasset = getsynasset or getcustomasset
 request = syn and syn.request or requet
 
-local path = "VexHubAdvertisingInfo.png"
-local url = "https://cdn.discordapp.com/attachments/1020631817499447397/1163065590353760326/Advertise_With_VexHub_20231015_184708_0000.png"
+local path = "vexman.png"
+local url = ""
 local result = request({
 	Url = url,
 	Method = 'GET'
@@ -20,3 +20,5 @@ end
 else
 print(result)
 end
+
+game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ScriptAds.Image = getcustomasset("vexman.png")
