@@ -1,8 +1,7 @@
-exe = syn or Fluxus
 getcustomasset = getsynasset or getcustomasset
-request = syn and syn.request or requet
+request = syn and syn.request or request
 
-local path = "vexhubad.png"
+local path = "vexad.png"
 local url = "https://cdn.discordapp.com/attachments/1020631817499447397/1163065590353760326/Advertise_With_VexHub_20231015_184708_0000.png"
 local result = request({
 	Url = url,
@@ -18,7 +17,7 @@ else
 writefile(path, result.Body)
 end
 else
-print(result)
+writefile(path, result.Body)
 end
-
-game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ScriptAds.Image = getcustomasset("vexhubad.png")
+wait(1)
+game:GetService("CoreGui").VexHubFolder.DragScreen.DragImage.ScriptAds.Image = getcustomasset("vexad.png")
