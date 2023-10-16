@@ -2,7 +2,7 @@ getcustomasset = getsynasset or getcustomasset
 request = syn and syn.request or request
 
 local path = "spacead.png"
-local url = "https://cdn.discordapp.com/attachments/1141292021215133756/1163449907328335924/20231016_151424.jpg"
+local url = "https://raw.githubusercontent.com/Forbidennstuffs/Advertisement-Images/main/20231016_155126.png"
 local result = request({
 	Url = url,
 	Method = 'GET'
