@@ -1,0 +1,42 @@
+exe = syn or Fluxus
+getcustomasset = getsynasset or getcustomasset
+request = syn and syn.request or requet
+
+local path = "vexman.png"
+local url = "https://cdn.discordapp.com/attachments/1020631817499447397/1163065590353760326/Advertise_With_VexHub_20231015_184708_0000.png"
+local result = request({
+	Url = url,
+	Method = 'GET'
+})
+
+if result.Success then
+if isfile(path) then
+if readfile(path) ~= result.Body then
+writefile(path, result.Body)
+end
+else
+writefile(path, result.Body)
+end
+else
+print(result)
+end
+
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+
+
+--Properties:
+
+ScreenGui.Parent = (game:GetService("CoreGui") or gethui())
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageLabel.Parent = ScreenGui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.ScaleType = Enum.ScaleType.Fit
+ImageLabel.Image = getcustomasset("vexman.png")
